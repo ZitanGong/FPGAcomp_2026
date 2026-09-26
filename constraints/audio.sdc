@@ -1,11 +1,3 @@
-create_clock -name sys_clk -period 19.047619 [get_pins {u_osc/OSCOUT}]
-set_clock_uncertainty 2.500 -setup -to [get_clocks {sys_clk}]
-create_generated_clock -name pt_bclk -source [get_pins {u_osc/OSCOUT}] -divide_by 32 [get_ports {hp_bclk}]
-# Conservative interface budget, not a measured board margin.
-set_output_delay -clock pt_bclk -max 20.000 [get_ports {hp_sd hp_ws}]
-set_output_delay -clock pt_bclk -min -5.000 [get_ports {hp_sd hp_ws}]
-set_multicycle_path 16 -setup -start -from [get_clocks {sys_clk}] -to [get_ports {hp_sd hp_ws}]
-set_multicycle_path 31 -hold -start -from [get_clocks {sys_clk}] -to [get_ports {hp_sd hp_ws}]
 set_false_path -from [get_ports {key_in[*] test_n rst_n}]
-set_max_delay 100.000 -from [get_clocks {sys_clk}] -to [get_ports {shld key_clk dbg_frame dbg_key dbg_err dbg_ref pa_n dbg_rst}]
-set_min_delay 0.000 -from [get_clocks {sys_clk}] -to [get_ports {shld key_clk dbg_frame dbg_key dbg_err dbg_ref pa_n dbg_rst}]
+set_max_delay 100.000 -to [get_ports {shld key_clk hp_bclk hp_sd hp_ws dbg_frame dbg_key dbg_err dbg_ref pa_n dbg_rst}]
+set_min_delay 0.000 -to [get_ports {shld key_clk hp_bclk hp_sd hp_ws dbg_frame dbg_key dbg_err dbg_ref pa_n dbg_rst}]
