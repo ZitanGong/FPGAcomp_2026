@@ -1,0 +1,12 @@
+/xsim.dir/
+/impl/gwsynthesis/
+/impl/pnr/*
+!/impl/pnr/synth21.fs
+/impl/temp/
+*.gprj.user
+/*.log
+/*.jou
+/*.pb
+/*.wdb
+/transcript
+/.Xil/

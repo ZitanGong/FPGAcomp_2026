@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Sep 26 10:55:12 2026
+# Process ID         : 37576
+# Current directory  : E:/FPGA/comp_2026/proj1/fpga_project1
+# Command line       : xsim.exe -log reports/tb_board.log -mode tcl -source {xsim.dir/tb_board/xsim_script.tcl}
+# Log file           : E:/FPGA/comp_2026/proj1/fpga_project1/reports/tb_board.log
+# Journal file       : E:/FPGA/comp_2026/proj1/fpga_project1\xsim.jou
+# Running On         : Tony-Thinkbook16p
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 255HX
+# CPU Frequency      : 2880 MHz
+# CPU Physical cores : 20
+# CPU Logical cores  : 20
+# Host memory        : 33751 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 42341 MB
+# Available Virtual  : 11162 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_board/xsim_script.tcl
+# xsim {tb_board} -autoloadwcfg -tclbatch {sim/run.tcl}
+Time resolution is 1 ps
+source sim/run.tcl
+## run all
+PASS tb_board: internal OSC PT8211, keyboard/all keys/retrigger/test key, zero idle, stereo and deadline; latency=3119291 ns
+$finish called at time : 128189201828 ps : File "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_board.sv" Line 72
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 196.250 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 30836 KB (Peak: 30836 KB), Simulation CPU Usage: 13265 ms
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 10:55:28 2026...

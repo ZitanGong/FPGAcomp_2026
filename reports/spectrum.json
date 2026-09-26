@@ -1,0 +1,25 @@
+{
+  "samples": 48000,
+  "sample_rate_hz": 51269.53125,
+  "four_peaks": [
+    {
+      "expected_hz": 130.81278265,
+      "fft_hz": 130.7852997381615
+    },
+    {
+      "expected_hz": 329.62755691,
+      "fft_hz": 329.64171293319606
+    },
+    {
+      "expected_hz": 391.99543598,
+      "fft_hz": 391.99539288270785
+    },
+    {
+      "expected_hz": 987.76660251,
+      "fft_hz": 987.7670719618819
+    }
+  ],
+  "max_fcw_error_cent": 6.817875199706959e-05,
+  "peak_pcm": 3928,
+  "status": "PASS simulation only; no analog capture"
+}

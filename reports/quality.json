@@ -1,0 +1,10 @@
+{
+  "nominal_fs_hz": 51269.53125,
+  "voice_error_rms_lsb_before": 41.03725655808557,
+  "voice_error_rms_lsb_after": 10.265804390396571,
+  "digital_error_reduction_db": 12.035706693389576,
+  "fixed_gain_db_increase": 3.5218251811136247,
+  "max_21_voice_peak_fraction": 0.984375,
+  "max_nominal_fcw_error_cent": 6.817875199706959e-05,
+  "status": "PASS RTL and numeric comparison only; analog noise not measured"
+}

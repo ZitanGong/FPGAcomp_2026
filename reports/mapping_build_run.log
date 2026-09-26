@@ -1,0 +1,89 @@
+*** GOWIN Tcl Command Line Console  *** 
+alog error: failed to open log file: 'C:/Users/lenovo/AppData/Local/GowinSemi/IDE/cache/sh.log'
+Open project E:/FPGA/comp_2026/proj1/fpga_project1/fpga_project1.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\audio_core.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\top.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\audio\i2s_tx.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\audio\pt8211_tx.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\clock\reset_sync.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\key\key_filter.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\key\key_map.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\key\scan165.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\adsr.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\div16.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\mix21.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\sine_rom.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\synth21.v'
+Analyzing Verilog file 'E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\voice.v'
+Compiling module 'top'("E:\FPGA\comp_2026\proj1\fpga_project1\src\top.v":1)
+Compiling module 'reset_sync'("E:\FPGA\comp_2026\proj1\fpga_project1\src\clock\reset_sync.v":1)
+Compiling module 'audio_core(CLK_HZ=52500000,PT_MODE=1,SHIFT=6,GAIN=3,A_N=51,D_N=2563,R_N=5127)'("E:\FPGA\comp_2026\proj1\fpga_project1\src\audio_core.v":1)
+Compiling module 'scan165(CLK_HZ=52500000)'("E:\FPGA\comp_2026\proj1\fpga_project1\src\key\scan165.v":1)
+Compiling module 'key_filter'("E:\FPGA\comp_2026\proj1\fpga_project1\src\key\key_filter.v":1)
+Extracting RAM for identifier 'cnt'("E:\FPGA\comp_2026\proj1\fpga_project1\src\key\key_filter.v":8)
+Compiling module 'key_map'("E:\FPGA\comp_2026\proj1\fpga_project1\src\key\key_map.v":1)
+Compiling module 'synth21(SHIFT=6,GAIN=3)'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\synth21.v":1)
+Extracting RAM for identifier 'init_fcw'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\synth21.v":12)
+Compiling module 'voice'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\voice.v":1)
+Compiling module 'adsr'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\adsr.v":1)
+Compiling module 'div16'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\div16.v":1)
+Compiling module 'sine_rom'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\sine_rom.v":1)
+Extracting RAM for identifier 'mem'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\sine_rom.v":5)
+Compiling module 'mix21(SHIFT=6,GAIN=3)'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\mix21.v":1)
+Extracting RAM for identifier 's1'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\mix21.v":7)
+Extracting RAM for identifier 's2'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\mix21.v":8)
+Extracting RAM for identifier 's3'("E:\FPGA\comp_2026\proj1\fpga_project1\src\synth\mix21.v":9)
+Compiling module 'pt8211_tx'("E:\FPGA\comp_2026\proj1\fpga_project1\src\audio\pt8211_tx.v":1)
+NOTE  (EX0101) : Current top module is "top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "key_map" instantiated to "u_map" is swept in optimizing("E:\FPGA\comp_2026\proj1\fpga_project1\src\audio_core.v":22)
+[95%] Generate netlist file "E:\FPGA\comp_2026\proj1\fpga_project1\impl\gwsynthesis\synth21.vg" completed
+[100%] Generate report file "E:\FPGA\comp_2026\proj1\fpga_project1\impl\gwsynthesis\synth21_syn.rpt.html" completed
+GowinSynthesis finish
+Reading netlist file: "E:\FPGA\comp_2026\proj1\fpga_project1\impl\gwsynthesis\synth21.vg"
+Parsing netlist file "E:\FPGA\comp_2026\proj1\fpga_project1\impl\gwsynthesis\synth21.vg" completed
+Processing netlist completed
+Reading constraint file: "E:\FPGA\comp_2026\proj1\fpga_project1\constraints\neo31005.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+WARN  (TA1123) : the clock "sys_clk"'s frequency does not match u_osc/OSCOUT's 
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "E:\FPGA\comp_2026\proj1\fpga_project1\impl\pnr\synth21.power.html" completed
+Generate file "E:\FPGA\comp_2026\proj1\fpga_project1\impl\pnr\synth21.pin.html" completed
+Generate file "E:\FPGA\comp_2026\proj1\fpga_project1\impl\pnr\synth21.rpt.html" completed
+Generate file "E:\FPGA\comp_2026\proj1\fpga_project1\impl\pnr\synth21.rpt.txt" completed
+Generate file "E:\FPGA\comp_2026\proj1\fpga_project1\impl\pnr\synth21.tr.html" completed
+Sat Sep 26 10:54:28 2026
+
