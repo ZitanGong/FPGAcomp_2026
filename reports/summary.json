@@ -16,7 +16,7 @@
   },
   "resources": {
     "Logic": {
-      "used": 8829,
+      "used": 8836,
       "available": 138240
     },
     "Register": {
@@ -34,7 +34,7 @@
   },
   "builds": {
     "synth21": {
-      "fmax_mhz": 79.646,
+      "fmax_mhz": 77.906,
       "setup_violations": 0,
       "hold_violations": 0
     }
@@ -84,7 +84,5 @@
     "sample_rate_measured": false
   },
   "input_clock_configuration": "none; internal OSC only",
-  "synthesis_warnings": [
-    "WARN  (NL0002) : The module \"key_map\" instantiated to \"u_map\" is swept in optimizing(\"E:\\FPGA\\comp_2026\\proj1\\fpga_project1\\src\\audio_core.v\":22)"
-  ]
+  "synthesis_warnings": []
 }

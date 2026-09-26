@@ -22,8 +22,10 @@ for hz in tones:
     peaks.append({'expected_hz': hz, 'fft_hz': float(measured)})
 words = [int(t, 16) for t in (root/'rom/notes.hex').read_text().split()]
 steps = [0, 2, 4, 5, 7, 9, 11]
+switches = (5,6,7,1,2,3,4,12,13,14,8,9,10,11,19,20,21,15,16,17,18)
 errors = []
-for i, word in enumerate(words):
+for i, sw in enumerate(switches):
+    word = words[sw-1]
     midi = 48 + (i//7)*12 + steps[i%7]
     hz = 440 * 2 ** ((midi-69)/12)
     errors.append(abs(1200*math.log2(word*fs/(2**32*hz))))

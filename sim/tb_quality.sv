@@ -5,7 +5,7 @@ module tb_quality;
     reg [31:0] notes[0:20];
     wire signed [15:0] pcm;
     wire valid;
-    voice dut(clk,rst,ce,gate,notes[12],16'd0,16'd0,16'd32768,16'd0,pcm,valid);
+    voice dut(clk,rst,ce,gate,notes[9],16'd0,16'd0,16'd32768,16'd0,pcm,valid);
     integer n,fd;
     task sample;
         begin

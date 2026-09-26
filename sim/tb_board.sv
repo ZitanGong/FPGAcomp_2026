@@ -2,7 +2,6 @@
 module tb_board;
     reg rst_n=1,test_n=1;
     reg [20:0] press=0;
-    wire [20:0] mapped={press[17:14],press[20:18],press[10:7],press[13:11],press[3:0],press[6:4]};
     wire [2:0] din;
     wire shld,kclk,bc,ws,sd,pa,df,dk,de,dr,dl,ds;
     top dut(.rst_n(rst_n),.test_n(test_n),.key_in(din),
@@ -58,8 +57,8 @@ module tb_board;
         wait(dk); wait(taudio!=0);
         if(taudio-tpress>3300000) $fatal(1,"board keyboard latency");
         repeat(150) @(negedge ws);
-        if(dut.keys!=mapped || nonzero<100) $fatal(1,"keyboard chord");
-        press=21'h1fffff; wait(dut.keys==mapped); repeat(200) @(negedge ws);
+        if(dut.keys!=press || nonzero<100) $fatal(1,"keyboard chord");
+        press=21'h1fffff; wait(dut.keys==press); repeat(200) @(negedge ws);
         press=0; wait(!dk); repeat(100) @(negedge ws);
         press=1; wait(dk); repeat(100) @(negedge ws);
         press=0; wait(!dk); repeat(5139) @(negedge ws);

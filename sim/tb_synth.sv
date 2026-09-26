@@ -2,7 +2,7 @@
 module tb_synth;
     reg clk=0,rst=1,ce=0,we=0;
     always #5 clk=~clk;
-    reg [20:0] keys=21'h100a01;
+    reg [20:0] keys=21'h022110;
     reg [4:0] idx=0;
     reg [31:0] val=0;
     wire signed [15:0] pcm;

@@ -1,0 +1,432 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/key/key_filter.v" into library work
+INFO: [VRFC 10-311] analyzing module key_filter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/key/scan165.v" into library work
+INFO: [VRFC 10-311] analyzing module scan165
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/synth/adsr.v" into library work
+INFO: [VRFC 10-311] analyzing module adsr
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/synth/div16.v" into library work
+INFO: [VRFC 10-311] analyzing module div16
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/synth/mix21.v" into library work
+INFO: [VRFC 10-311] analyzing module mix21
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/synth/sine_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module sine_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/synth/synth21.v" into library work
+INFO: [VRFC 10-311] analyzing module synth21
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/synth/voice.v" into library work
+INFO: [VRFC 10-311] analyzing module voice
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/audio/i2s_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module i2s_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/audio/pt8211_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module pt8211_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/audio_core.v" into library work
+INFO: [VRFC 10-311] analyzing module audio_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Program Files/Gowin/Gowin_V1.9.12.03_x64/IDE/simlib/gw5a/prim_sim.v" into library work
+INFO: [VRFC 10-311] analyzing module MUX2
+INFO: [VRFC 10-311] analyzing module MUX2_LUT5
+INFO: [VRFC 10-311] analyzing module MUX2_LUT6
+INFO: [VRFC 10-311] analyzing module MUX2_LUT7
+INFO: [VRFC 10-311] analyzing module MUX2_LUT8
+INFO: [VRFC 10-311] analyzing module MUX2_MUX8
+INFO: [VRFC 10-311] analyzing module MUX2_MUX16
+INFO: [VRFC 10-311] analyzing module MUX2_MUX32
+INFO: [VRFC 10-311] analyzing module MUX4
+INFO: [VRFC 10-311] analyzing module MUX8
+INFO: [VRFC 10-311] analyzing module MUX16
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-311] analyzing module LUT1
+INFO: [VRFC 10-311] analyzing module LUT2
+INFO: [VRFC 10-311] analyzing module LUT3
+INFO: [VRFC 10-311] analyzing module LUT4
+INFO: [VRFC 10-311] analyzing module LUT5
+INFO: [VRFC 10-311] analyzing module LUT6
+INFO: [VRFC 10-311] analyzing module LUT7
+INFO: [VRFC 10-311] analyzing module LUT8
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module DFFSE
+INFO: [VRFC 10-311] analyzing module DFFRE
+INFO: [VRFC 10-311] analyzing module DFFPE
+INFO: [VRFC 10-311] analyzing module DFFCE
+INFO: [VRFC 10-311] analyzing module DLCE
+INFO: [VRFC 10-311] analyzing module DLPE
+INFO: [VRFC 10-311] analyzing module RAM16S1
+INFO: [VRFC 10-311] analyzing module RAM16S2
+INFO: [VRFC 10-311] analyzing module RAM16S4
+INFO: [VRFC 10-311] analyzing module RAM16SDP1
+INFO: [VRFC 10-311] analyzing module RAM16SDP2
+INFO: [VRFC 10-311] analyzing module RAM16SDP4
+INFO: [VRFC 10-311] analyzing module ROM16
+INFO: [VRFC 10-311] analyzing module INV
+INFO: [VRFC 10-311] analyzing module GND
+INFO: [VRFC 10-311] analyzing module VCC
+INFO: [VRFC 10-311] analyzing module GSR
+INFO: [VRFC 10-311] analyzing module IBUF
+INFO: [VRFC 10-311] analyzing module OBUF
+INFO: [VRFC 10-311] analyzing module TBUF
+INFO: [VRFC 10-311] analyzing module IOBUF
+INFO: [VRFC 10-311] analyzing module TLVDS_IBUF
+INFO: [VRFC 10-311] analyzing module TLVDS_OBUF
+INFO: [VRFC 10-311] analyzing module TLVDS_TBUF
+INFO: [VRFC 10-311] analyzing module TLVDS_IOBUF
+INFO: [VRFC 10-311] analyzing module ELVDS_OBUF
+INFO: [VRFC 10-311] analyzing module ELVDS_TBUF
+INFO: [VRFC 10-311] analyzing module ELVDS_IOBUF
+INFO: [VRFC 10-311] analyzing module MIPI_IBUF
+INFO: [VRFC 10-311] analyzing module MIPI_OBUF_A
+INFO: [VRFC 10-311] analyzing module MIPI_OBUF_LP
+INFO: [VRFC 10-311] analyzing module IOBUF_LP
+INFO: [VRFC 10-311] analyzing module ELVDS_IOBUF_R
+INFO: [VRFC 10-311] analyzing module I3C_IOBUF
+INFO: [VRFC 10-311] analyzing module TLVDS_IBUF_ADC
+INFO: [VRFC 10-311] analyzing module SP
+INFO: [VRFC 10-311] analyzing module SPX9
+INFO: [VRFC 10-311] analyzing module SDPB
+INFO: [VRFC 10-311] analyzing module SDPX9B
+INFO: [VRFC 10-311] analyzing module DPB
+INFO: [VRFC 10-311] analyzing module DPX9B
+INFO: [VRFC 10-311] analyzing module pROM
+INFO: [VRFC 10-311] analyzing module pROMX9
+INFO: [VRFC 10-311] analyzing module SDP36KE
+INFO: [VRFC 10-311] analyzing module SDP136K
+INFO: [VRFC 10-311] analyzing module MULTADDALU12X12
+INFO: [VRFC 10-311] analyzing module MULTALU27X18
+INFO: [VRFC 10-311] analyzing module MULT12X12
+INFO: [VRFC 10-311] analyzing module MULT27X36
+INFO: [VRFC 10-311] analyzing module MULTACC
+INFO: [VRFC 10-311] analyzing module IDDR
+INFO: [VRFC 10-311] analyzing module IDDRC
+INFO: [VRFC 10-311] analyzing module IDDR_MEM
+INFO: [VRFC 10-311] analyzing module ODDR
+INFO: [VRFC 10-311] analyzing module ODDRC
+INFO: [VRFC 10-311] analyzing module ODDR_MEM
+INFO: [VRFC 10-311] analyzing module IDES4
+INFO: [VRFC 10-311] analyzing module IDES8
+INFO: [VRFC 10-311] analyzing module IDES10
+INFO: [VRFC 10-311] analyzing module IDES16
+INFO: [VRFC 10-311] analyzing module IDES4_MEM
+INFO: [VRFC 10-311] analyzing module IVIDEO
+INFO: [VRFC 10-311] analyzing module IDES8_MEM
+INFO: [VRFC 10-311] analyzing module IDES14
+INFO: [VRFC 10-311] analyzing module IDES32
+INFO: [VRFC 10-311] analyzing module OSER4
+INFO: [VRFC 10-311] analyzing module OSER4_MEM
+INFO: [VRFC 10-311] analyzing module OVIDEO
+INFO: [VRFC 10-311] analyzing module OSER8
+INFO: [VRFC 10-311] analyzing module OSER8_MEM
+INFO: [VRFC 10-311] analyzing module OSER10
+INFO: [VRFC 10-311] analyzing module OSER14
+INFO: [VRFC 10-311] analyzing module OSER16
+INFO: [VRFC 10-311] analyzing module IODELAY
+INFO: [VRFC 10-311] analyzing module OSIDES32
+INFO: [VRFC 10-311] analyzing module OSIDES64
+INFO: [VRFC 10-311] analyzing module DCE
+INFO: [VRFC 10-311] analyzing module DCS
+INFO: [VRFC 10-311] analyzing module DDRDLL
+INFO: [VRFC 10-311] analyzing module DLLDLY
+INFO: [VRFC 10-311] analyzing module CLKDIV
+INFO: [VRFC 10-311] analyzing module CLKDIV2
+INFO: [VRFC 10-311] analyzing module DHCE
+INFO: [VRFC 10-311] analyzing module OSC
+INFO: [VRFC 10-311] analyzing module OSCA
+INFO: [VRFC 10-311] analyzing module OSCB
+INFO: [VRFC 10-311] analyzing module PLL
+INFO: [VRFC 10-311] analyzing module PLLA
+INFO: [VRFC 10-311] analyzing module AE350_SOC
+INFO: [VRFC 10-311] analyzing module AE350_RAM
+INFO: [VRFC 10-311] analyzing module SAMB
+INFO: [VRFC 10-311] analyzing module OTP
+INFO: [VRFC 10-311] analyzing module CMSER
+INFO: [VRFC 10-311] analyzing module CMSERA
+INFO: [VRFC 10-311] analyzing module CMSERB
+INFO: [VRFC 10-311] analyzing module SAMBA
+INFO: [VRFC 10-311] analyzing module ADCLRC
+INFO: [VRFC 10-311] analyzing module ADCULC
+INFO: [VRFC 10-311] analyzing module ADC
+INFO: [VRFC 10-311] analyzing module ADC_SAR
+INFO: [VRFC 10-311] analyzing module ADCA
+INFO: [VRFC 10-311] analyzing module LICD
+INFO: [VRFC 10-311] analyzing module MIPI_DPHY_RX
+INFO: [VRFC 10-311] analyzing module MIPI_DPHY
+INFO: [VRFC 10-311] analyzing module MIPI_DPHYA
+INFO: [VRFC 10-311] analyzing module MIPI_CPHY
+INFO: [VRFC 10-311] analyzing module GTR12_QUAD
+INFO: [VRFC 10-311] analyzing module GTR12_UPAR
+INFO: [VRFC 10-311] analyzing module GTR12_PMAC
+INFO: [VRFC 10-311] analyzing module GTR12_QUADA
+INFO: [VRFC 10-311] analyzing module GTR12_UPARA
+INFO: [VRFC 10-311] analyzing module GTR12_PMACA
+INFO: [VRFC 10-311] analyzing module GTR12_QUADB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/clock/reset_sync.v" into library work
+INFO: [VRFC 10-311] analyzing module reset_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/comp_2026/proj1/fpga_project1/src/top.v" into library work
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/hc165.sv" into library work
+INFO: [VRFC 10-311] analyzing module hc165
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_board.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_board
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_div.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_div
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_env.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_env
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_i2s.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_i2s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_key_fault.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_key_fault
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_key.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_map.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_map
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_mix.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mix
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_pt_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pt_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_pt.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_quality.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_quality
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_synth.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_synth
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --timescale 1ns/1ps --debug typical work.tb_map -s tb_map 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.tb_map
+Built simulation snapshot tb_map
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Sep 26 11:17:58 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_map/xsim_script.tcl
+# xsim {tb_map} -autoloadwcfg -tclbatch {sim/run.tcl}
+Time resolution is 1 ps
+source sim/run.tcl
+## run all
+PASS tb_map: frequency table only; Do-Si SW5,6,7,1,2,3,4 / SW12,13,14,8,9,10,11 / SW19,20,21,15,16,17,18
+$finish called at time : 0 fs : File "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_map.sv" Line 18
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 11:18:00 2026...
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --timescale 1ns/1ps --debug typical work.tb_synth -s tb_synth 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.div16
+Compiling module work.adsr
+Compiling module work.sine_rom
+Compiling module work.voice
+Compiling module work.mix21_default
+Compiling module work.synth21_default
+Compiling module work.tb_synth
+Built simulation snapshot tb_synth
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Sep 26 11:18:03 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_synth/xsim_script.tcl
+# xsim {tb_synth} -autoloadwcfg -tclbatch {sim/run.tcl}
+Time resolution is 1 ps
+source sim/run.tcl
+## run all
+PASS tb_synth: 48413 samples, 21 parallel phases/ROM/products, live FCW, 9-cycle deadline, four-tone dump
+$finish called at time : 30984400 ns : File "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_synth.sv" Line 67
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 196.434 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 11:18:10 2026...
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --timescale 1ns/1ps --debug typical work.tb_core -s tb_core 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.scan165_default
+Compiling module work.key_filter
+Compiling module work.div16
+Compiling module work.adsr
+Compiling module work.sine_rom
+Compiling module work.voice
+Compiling module work.mix21_default
+Compiling module work.synth21_default
+Compiling module work.i2s_tx
+Compiling module work.audio_core_default
+Compiling module work.hc165
+Compiling module work.tb_core
+Built simulation snapshot tb_core
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Sep 26 11:18:14 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_core/xsim_script.tcl
+# xsim {tb_core} -autoloadwcfg -tclbatch {sim/run.tcl}
+Time resolution is 1 ps
+source sim/run.tcl
+## run all
+Digital latency: key=3074237 ns, first complete I2S word=3103820 ns
+PASS tb_core: 5609 frames, real dividers, keyboard-to-I2S, sample latency 9/1024 cycles
+$finish called at time : 116858644701 ps : File "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_core.sv" Line 58
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 196.445 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 30788 KB (Peak: 30788 KB), Simulation CPU Usage: 10030 ms
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 11:18:26 2026...
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --timescale 1ns/1ps --debug typical work.tb_pt_core -s tb_pt_core 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.scan165_default
+Compiling module work.key_filter
+Compiling module work.div16
+Compiling module work.adsr
+Compiling module work.sine_rom
+Compiling module work.voice
+Compiling module work.mix21_default
+Compiling module work.synth21_default
+Compiling module work.pt8211_tx
+Compiling module work.audio_core(PT_MODE=1)
+Compiling module work.hc165
+Compiling module work.tb_pt_core
+Built simulation snapshot tb_pt_core
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Sep 26 11:18:30 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_pt_core/xsim_script.tcl
+# xsim {tb_pt_core} -autoloadwcfg -tclbatch {sim/run.tcl}
+Time resolution is 1 ps
+source sim/run.tcl
+## run all
+PT digital latency: 3108703 ns
+PASS tb_pt_core: 6203 frames, keyboard/chord/retrigger/test key, 9/1024-cycle deadline
+$finish called at time : 129234384045 ps : File "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_pt_core.sv" Line 63
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 196.676 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 30824 KB (Peak: 30824 KB), Simulation CPU Usage: 13342 ms
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 11:18:45 2026...
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --timescale 1ns/1ps --debug typical work.tb_board -s tb_board 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.OSC(FREQ_DIV=4)
+Compiling module work.reset_sync
+Compiling module work.scan165(CLK_HZ=52500000)
+Compiling module work.key_filter
+Compiling module work.div16
+Compiling module work.adsr
+Compiling module work.sine_rom
+Compiling module work.voice
+Compiling module work.mix21(SHIFT=6,GAIN=3)
+Compiling module work.synth21(SHIFT=6,GAIN=3)
+Compiling module work.pt8211_tx
+Compiling module work.audio_core(CLK_HZ=52500000,PT_MO...
+Compiling module work.top
+Compiling module work.hc165
+Compiling module work.tb_board
+Built simulation snapshot tb_board
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Sep 26 11:18:49 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_board/xsim_script.tcl
+# xsim {tb_board} -autoloadwcfg -tclbatch {sim/run.tcl}
+Time resolution is 1 ps
+source sim/run.tcl
+## run all
+PASS tb_board: internal OSC PT8211, keyboard/all keys/retrigger/test key, zero idle, stereo and deadline; latency=3119291 ns
+$finish called at time : 131192995236 ps : File "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_board.sv" Line 71
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 196.441 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 30852 KB (Peak: 30852 KB), Simulation CPU Usage: 15139 ms
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 11:19:06 2026...
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --timescale 1ns/1ps --debug typical work.tb_quality -s tb_quality 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.div16
+Compiling module work.adsr
+Compiling module work.sine_rom
+Compiling module work.voice
+Compiling module work.tb_quality
+Built simulation snapshot tb_quality
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Sep 26 11:19:10 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_quality/xsim_script.tcl
+# xsim {tb_quality} -autoloadwcfg -tclbatch {sim/run.tcl}
+Time resolution is 1 ps
+source sim/run.tcl
+## run all
+PASS tb_quality: 4096-point A4, symmetric output, exact idle zero
+$finish called at time : 16409040 ns : File "E:/FPGA/comp_2026/proj1/fpga_project1/sim/tb_quality.sv" Line 30
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 11:19:12 2026...
+PASS spectrum: {"samples": 48000, "sample_rate_hz": 51269.53125, "four_peaks": [{"expected_hz": 130.81278265, "fft_hz": 130.7852997381615}, {"expected_hz": 329.62755691, "fft_hz": 329.64171293319606}, {"expected_hz": 391.99543598, "fft_hz": 391.99539288270785}, {"expected_hz": 987.76660251, "fft_hz": 987.7670719618819}], "max_fcw_error_cent": 6.817875199706959e-05, "peak_pcm": 3928, "status": "PASS simulation only; no analog capture"}
+PASS quality: {"nominal_fs_hz": 51269.53125, "voice_error_rms_lsb_before": 41.03725655808557, "voice_error_rms_lsb_after": 10.265804390396571, "digital_error_reduction_db": 12.035706693389576, "fixed_gain_db_increase": 3.5218251811136247, "max_21_voice_peak_fraction": 0.984375, "max_nominal_fcw_error_cent": 6.817875199706959e-05, "status": "PASS RTL and numeric comparison only; analog noise not measured"}

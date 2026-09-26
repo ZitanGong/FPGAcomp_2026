@@ -14,12 +14,11 @@ module audio_core #(
     output signed [15:0] pcm, output valid, output ce,
     output reg fault
 );
-    wire [20:0] raw,phys;
+    wire [20:0] raw;
     wire done, good, clip, under, over;
-    wire [20:0] gates = test_en ? 21'h100a01 : keys;
+    wire [20:0] gates = test_en ? 21'h022110 : keys;
     scan165 #(.CLK_HZ(CLK_HZ)) u_scan(clk,rst,key_in,shld,key_clk,raw,done,good);
-    key_filter u_filter(clk,rst,done,good,raw,DB_N[7:0],phys);
-    key_map u_map(phys,keys);
+    key_filter u_filter(clk,rst,done,good,raw,DB_N[7:0],keys);
     synth21 #(.NOTES(NOTES),.SHIFT(SHIFT),.GAIN(GAIN)) u_synth(clk,rst,ce,gates,cfg_we,cfg_idx,cfg_fcw,
         A_N[15:0],D_N[15:0],S_LV[15:0],R_N[15:0],pcm,valid,clip);
     generate if (PT_MODE) begin: PT

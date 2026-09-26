@@ -22,7 +22,9 @@ steps=(0,2,4,5,7,9,11)
 words=[int(x,16) for x in (root/'rom/notes.hex').read_text().split()]
 fs=52500000/1024
 cents=[]
-for i,w in enumerate(words):
+switches=(5,6,7,1,2,3,4,12,13,14,8,9,10,11,19,20,21,15,16,17,18)
+for i,sw in enumerate(switches):
+    w=words[sw-1]
     f=440*2**((48+i//7*12+steps[i%7]-69)/12)
     cents.append(abs(1200*np.log2(w*fs/2**32/f)))
 assert max(cents)<.0001

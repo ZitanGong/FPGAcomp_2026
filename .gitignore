@@ -2,6 +2,7 @@
 /impl/gwsynthesis/
 /impl/pnr/*
 !/impl/pnr/synth21.fs
+!/impl/pnr/synth21_known_good.fs
 /impl/temp/
 *.gprj.user
 /*.log
