@@ -7,7 +7,7 @@ module tb_core;
     wire shld,kclk,bclk,lrck,sd,mclk,valid,ce,fault;
     wire [20:0] keys;
     wire signed [15:0] pcm;
-    audio_core dut(clk,rst,din,test_en,1'b0,5'd0,32'd0,
+    audio_core dut(clk,rst,din,2'd0,3'd4,test_en,1'b0,5'd0,32'd0,
         shld,kclk,bclk,lrck,sd,mclk,keys,pcm,valid,ce,fault);
     hc165 a(shld,kclk,{1'b1,~press[6:0]},din[0]);
     hc165 b(shld,kclk,{1'b1,~press[13:7]},din[1]);
@@ -21,7 +21,7 @@ module tb_core;
         if(!rst && ce) start_cycle=cycles;
         #0.001;
         if(!rst && valid) begin
-            if(cycles-start_cycle!=9) $fatal(1,"sample deadline %0d",cycles-start_cycle);
+            if(cycles-start_cycle!=11) $fatal(1,"sample deadline %0d",cycles-start_cycle);
             max_delay=cycles-start_cycle; next_pcm=pcm;
         end
         if(!rst && fault) $fatal(1,"integrated fault");

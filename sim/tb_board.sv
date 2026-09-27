@@ -1,10 +1,10 @@
 `timescale 1ns/1ps
 module tb_board;
-    reg rst_n=1,test_n=1;
+    reg key0_n=1,key1_n=1,key2_n=1;
     reg [20:0] press=0;
     wire [2:0] din;
     wire shld,kclk,bc,ws,sd,pa,df,dk,de,dr,dl,ds;
-    top dut(.rst_n(rst_n),.test_n(test_n),.key_in(din),
+    top dut(.key0_n(key0_n),.key1_n(key1_n),.key2_n(key2_n),.key_in(din),
         .shld(shld),.key_clk(kclk),.hp_bclk(bc),.hp_ws(ws),.hp_sd(sd),.pa_n(pa),
         .dbg_frame(df),.dbg_key(dk),.dbg_err(de),.dbg_ref(dr),.dbg_lock(dl),.dbg_rst(ds));
     hc165 a(shld,kclk,{1'b1,~press[6:0]},din[0]);
@@ -21,7 +21,7 @@ module tb_board;
         #0.001;
         if(pa) next_pcm=0;
         if(!pa && dut.valid) begin
-            if(cycles-start_cycle!=9) $fatal(1,"board deadline");
+            if(cycles-start_cycle!=11) $fatal(1,"board deadline");
             next_pcm=dut.pcm;
         end
         if(!pa && de) $fatal(1,"board fault");
@@ -46,7 +46,7 @@ module tb_board;
         prev=ws;
     end
     initial begin
-        rst_n=0; #1000; rst_n=1; wait(!pa);
+        wait(!pa);
         if(dl!==1) $fatal(1,"OSC ready flag");
         @(negedge ws); t=$realtime; @(negedge ws);
         period=$realtime-t;
@@ -65,10 +65,16 @@ module tb_board;
         if(dut.pcm!=0) $fatal(1,"release not silent");
         nonzero=0; repeat(100) @(negedge ws);
         if(nonzero) $fatal(1,"serial idle noise");
-        test_n=0; repeat(150) @(negedge ws);
-        if(nonzero<100 || dk) $fatal(1,"onboard test key");
-        $display("PASS tb_board: internal OSC PT8211, keyboard/all keys/retrigger/test key, zero idle, stereo and deadline; latency=%0d ns",taudio-tpress);
+        key0_n=0; repeat(600) @(negedge ws);
+        if(dut.timbre!=2'd1) $fatal(1,"KEY0 timbre select");
+        key0_n=1; repeat(600) @(negedge ws);
+        if(dut.timbre!=2'd1) $fatal(1,"KEY0 release changed timbre");
+        key1_n=0; repeat(600) @(negedge ws); key1_n=1; repeat(600) @(negedge ws);
+        if(dut.volume!=3'd4) $fatal(1,"KEY1 volume down");
+        key2_n=0; repeat(600) @(negedge ws); key2_n=1; repeat(600) @(negedge ws);
+        if(dut.volume!=3'd5) $fatal(1,"KEY2 volume up");
+        $display("PASS tb_board: POR, PT8211, keyboard/all keys/retrigger/timbre/volume keys, zero idle, stereo and deadline; latency=%0d ns",taudio-tpress);
         $finish;
     end
-    initial begin #180000000; $fatal(1,"board timeout"); end
+    initial begin #250000000; $fatal(1,"board timeout"); end
 endmodule

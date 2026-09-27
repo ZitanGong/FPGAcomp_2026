@@ -5,9 +5,9 @@ module tb_mix;
     reg [335:0] x=0;
     wire signed [15:0] y,hot,loud;
     wire done,clip,hd,hc,ld,lc;
-    mix21 dut(clk,rst,valid,x,y,done,clip);
-    mix21 #(.SHIFT(0)) stress(clk,rst,valid,x,hot,hd,hc);
-    mix21 #(.SHIFT(6),.GAIN(3)) board(clk,rst,valid,x,loud,ld,lc);
+    mix21 dut(clk,rst,valid,x,3'd4,y,done,clip);
+    mix21 #(.SHIFT(0)) stress(clk,rst,valid,x,3'd4,hot,hd,hc);
+    mix21 #(.SHIFT(6),.GAIN(3)) board(clk,rst,valid,x,3'd4,loud,ld,lc);
     integer i,j,sum,v,expected,eh,el;
     task check;
         begin

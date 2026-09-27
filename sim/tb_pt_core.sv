@@ -7,7 +7,7 @@ module tb_pt_core;
     wire shld,kclk,bclk,ws,sd,mclk,valid,ce,fault;
     wire [20:0] keys;
     wire signed [15:0] pcm;
-    audio_core #(.PT_MODE(1)) dut(clk,rst,din,test_en,1'b0,5'd0,32'd0,
+    audio_core #(.PT_MODE(1)) dut(clk,rst,din,2'd0,3'd4,test_en,1'b0,5'd0,32'd0,
         shld,kclk,bclk,ws,sd,mclk,keys,pcm,valid,ce,fault);
     hc165 a(shld,kclk,{1'b1,~press[6:0]},din[0]);
     hc165 b(shld,kclk,{1'b1,~press[13:7]},din[1]);
@@ -24,7 +24,7 @@ module tb_pt_core;
         end
         #0.001;
         if(!rst && valid) begin
-            if(cycles-start_cycle!=9) $fatal(1,"PT deadline");
+            if(cycles-start_cycle!=11) $fatal(1,"PT deadline");
             next_pcm=pcm;
         end
         if(!rst && fault) $fatal(1,"PT core fault");
@@ -59,7 +59,7 @@ module tb_pt_core;
         if(dut.gates!=21'h022110) $fatal(1,"PT test key");
         test_en=0; repeat(4900) @(posedge ce);
         if(pcm!=0) $fatal(1,"PT release did not end");
-        $display("PASS tb_pt_core: %0d frames, keyboard/chord/retrigger/test key, 9/1024-cycle deadline",frames);
+        $display("PASS tb_pt_core: %0d frames, keyboard/chord/retrigger/test key, 11/1024-cycle deadline",frames);
         $finish;
     end
     initial begin #180000000; $fatal(1,"PT core timeout"); end
