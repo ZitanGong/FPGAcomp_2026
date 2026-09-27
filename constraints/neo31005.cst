@@ -1,13 +1,21 @@
-IO_LOC "rst_n" AA13;
-IO_LOC "test_n" AB13;
-IO_PORT "rst_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
-IO_PORT "test_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+// Dock silk KEY0 / USER_BUTTON0: timbre select.
+IO_LOC "key0_n" AA13;
+// Dock silk KEY1 / USER_BUTTON1: volume down.
+IO_LOC "key1_n" AB13;
+// Dock silk KEY2 / USER_BUTTON2: volume up.
+IO_LOC "key2_n" Y12;
+IO_PORT "key0_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "key1_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "key2_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
 IO_LOC "shld" AA21;
 IO_LOC "key_clk" AB20;
 IO_LOC "key_in[0]" AA19;
-IO_LOC "key_in[1]" D19;
-IO_LOC "key_in[2]" D16;
-IO_LOC "dbg_frame" R17;
+// PMOD0_IO5 (J9 pin 8), moved off the SDRAM0 address bus.
+IO_LOC "key_in[1]" R17;
+// PMOD0_IO4 (J9 pin 7), moved off the SDRAM0 write-enable signal.
+IO_LOC "key_in[2]" P16;
+// D19 is the now-unused SDRAM0_A0 pin and remains available for debug output.
+IO_LOC "dbg_frame" D19;
 IO_LOC "dbg_key" R18;
 IO_LOC "dbg_err" T18;
 IO_PORT "shld" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=4;
@@ -18,7 +26,7 @@ IO_PORT "key_in[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
 IO_PORT "dbg_frame" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=4;
 IO_PORT "dbg_key" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=4;
 IO_PORT "dbg_err" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=4;
-IO_LOC "dbg_ref" Y21;
+IO_LOC "dbg_ref" AA20;
 IO_LOC "dbg_lock" Y22;
 IO_LOC "dbg_rst" AB21;
 IO_PORT "dbg_ref" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=4;
