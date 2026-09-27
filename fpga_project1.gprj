@@ -12,6 +12,7 @@
 <File path="src/clock/reset_sync.v" type="file.verilog" enable="1"/>
 <File path="src/key/key_filter.v" type="file.verilog" enable="1"/>
 <File path="src/key/scan165.v" type="file.verilog" enable="1"/>
+<File path="src/key/button_debounce.v" type="file.verilog" enable="1"/>
 <File path="src/synth/adsr.v" type="file.verilog" enable="1"/>
 <File path="src/synth/div16.v" type="file.verilog" enable="1"/>
 <File path="src/synth/mix21.v" type="file.verilog" enable="1"/>
