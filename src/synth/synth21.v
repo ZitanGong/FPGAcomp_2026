@@ -49,6 +49,17 @@ module synth21 #(
             endcase
         end
     endfunction
+    // Karplus-Strong uses its own loudness curve.  The modal/organ curve above
+    // intentionally attenuates the upper register, but that makes plucked
+    // notes sound much quieter as the delay line gets shorter.  Keep the
+    // physical-model timbre nearly flat and let the per-note loop loss below
+    // control the decay time instead.
+    function [15:0] ks_note_gain;
+        input integer index;
+        begin
+            ks_note_gain=16'd32768;
+        end
+    endfunction
     // Integer delay including the 0.5-sample loop-average delay, for 51.2 kHz.
     // Indices follow the physical 74HC165 scan wiring rather than pitch order.
     function integer ks_delay;
@@ -66,13 +77,37 @@ module synth21 #(
             endcase
         end
     endfunction
+    // Choose the damping shift from the string length so that the T60 time is
+    // roughly constant across the keyboard.  A fixed shift makes short
+    // (high-pitch) delay lines decay much faster than long ones.
+    function [4:0] ks_loss_shift;
+        input integer index;
+        begin
+            case(index)
+                 0: ks_loss_shift=5'd7;  1: ks_loss_shift=5'd7;
+                 2: ks_loss_shift=5'd7;  3: ks_loss_shift=5'd7;
+                 4: ks_loss_shift=5'd7;  5: ks_loss_shift=5'd7;
+                 6: ks_loss_shift=5'd7;  7: ks_loss_shift=5'd8;
+                 8: ks_loss_shift=5'd8;  9: ks_loss_shift=5'd8;
+                10: ks_loss_shift=5'd8; 11: ks_loss_shift=5'd8;
+                12: ks_loss_shift=5'd8; 13: ks_loss_shift=5'd8;
+                14: ks_loss_shift=5'd9; 15: ks_loss_shift=5'd9;
+                16: ks_loss_shift=5'd9; 17: ks_loss_shift=5'd10;
+                18: ks_loss_shift=5'd9; 19: ks_loss_shift=5'd9;
+                20: ks_loss_shift=5'd9;
+              default: ks_loss_shift=5'd8;
+            endcase
+        end
+    endfunction
     always @(posedge clk) begin
         if(rst) for(i=0;i<21;i=i+1) fcw[i]<=init_fcw[i];
         else if(cfg_we && cfg_idx<21) fcw[cfg_idx]<=cfg_fcw;
     end
     genvar g;
     generate for(g=0;g<21;g=g+1) begin: V
-        voice #(.FILE(FILE),.NOTE_GAIN(note_gain(g)),.KS_DELAY(ks_delay(g))) u_voice(
+        voice #(.FILE(FILE),.NOTE_GAIN(note_gain(g)),
+                .KS_DELAY(ks_delay(g)),.KS_LOSS_SHIFT(ks_loss_shift(g)),
+                .KS_NOTE_GAIN(ks_note_gain(g))) u_voice(
             .clk(clk),.rst(rst),.ce(ce),.gate(keys[g]),.timbre(timbre),
             .fcw(fcw[g]),.a_n(a_n),.d_n(d_n),.s_lv(s_lv),.r_n(r_n),
             .pcm(voices[g*16 +: 16]),.valid(vv[g]));

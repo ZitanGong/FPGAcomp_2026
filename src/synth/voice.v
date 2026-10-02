@@ -1,7 +1,9 @@
 module voice #(
     parameter FILE = "rom/timbres4.hex",
     parameter [15:0] NOTE_GAIN = 16'd32768,
-    parameter integer KS_DELAY = 195
+    parameter integer KS_DELAY = 195,
+    parameter [4:0] KS_LOSS_SHIFT = 5'd8,
+    parameter [15:0] KS_NOTE_GAIN = 16'd32768
 )(
     input clk, input rst, input ce, input gate,
     input [1:0] timbre,
@@ -11,6 +13,8 @@ module voice #(
     output reg signed [15:0] pcm,
     output reg valid
 );
+    // 临时测试：D3 使用固定种子，其他音保持原种子
+    wire [15:0] ks_seed =(KS_DELAY == 348) ? 16'hace1 : (16'hace1 ^ KS_DELAY);
     (* syn_preserve = 1 *) reg [31:0] phase;
     wire [15:0] adsr_env;
     wire [2:0] state;
@@ -33,14 +37,17 @@ module voice #(
     reg signed [15:0] ks_mem [0:511] /* synthesis syn_ramstyle="block_ram" */;
     reg [8:0] ks_ptr, ks_read_ptr, ks_fill_ptr;
     reg [15:0] ks_lfsr;
-    reg signed [15:0] ks_noise_z1, ks_read, ks_z1, ks_out;
+    reg signed [15:0] ks_noise_z1;
+    reg signed [15:0] ks_read, ks_z1, ks_out;
     reg ks_filling, ks_active, ks_pending;
     wire ks_feedback_bit=ks_lfsr[15]^ks_lfsr[13]^ks_lfsr[12]^ks_lfsr[10];
     wire signed [16:0] ks_noise_sum=$signed(ks_lfsr)+ks_noise_z1;
-    wire signed [15:0] ks_excitation=ks_noise_sum>>>2;
+    wire signed [15:0] ks_excitation=ks_noise_sum>>>1;
     wire signed [16:0] ks_pair_sum=ks_read+ks_z1;
     wire signed [15:0] ks_average=ks_pair_sum>>>1;
-    wire signed [15:0] ks_loss=gate ? (ks_average>>>8) : (ks_average>>>3);
+    wire [4:0] ks_loss_shift = gate ? KS_LOSS_SHIFT :
+        (KS_LOSS_SHIFT > 5'd2 ? KS_LOSS_SHIFT-5'd2 : 5'd2);
+    wire signed [15:0] ks_loss=ks_average>>>ks_loss_shift;
     wire signed [16:0] ks_damped={ks_average[15],ks_average}
                                   -{ks_loss[15],ks_loss};
     wire [15:0] ks_abs=ks_read[15] ? (~ks_read+1'b1) : ks_read;
@@ -52,7 +59,8 @@ module voice #(
     wire [15:0] piano_env = piano_level[16] ? 16'hffff : piano_level[15:0];
     wire [15:0] selected_env = timbre==2'd2 ? 16'hffff :
                                timbre==2'd3 ? piano_env : adsr_env;
-    wire [32:0] tracked_amp={1'b0,selected_env}*NOTE_GAIN+33'd16384;
+    wire [15:0] active_note_gain = (timbre==2'd2) ? KS_NOTE_GAIN : NOTE_GAIN;
+    wire [32:0] tracked_amp={1'b0,selected_env}*active_note_gain+33'd16384;
     wire signed [16:0] attack_weight={1'b0,16'hffff-colour};
     wire signed [16:0] body_weight={1'b0,colour};
     wire signed [33:0] blend_sum={{1{attack_product[32]}},attack_product}
@@ -85,7 +93,8 @@ module voice #(
             old_gate<=0; old_timbre<=0;
             attack_product<=0; body_product<=0; wave_mix<=0; prod<=0;
             ks_ptr<=0; ks_read_ptr<=0; ks_fill_ptr<=0;
-            ks_lfsr<=16'hace1^KS_DELAY; ks_noise_z1<=0;
+            //ks_lfsr<=16'hace1^KS_DELAY; ks_noise_z1<=0;
+            ks_lfsr<=ks_seed; ks_noise_z1<=0;
             ks_read<=0; ks_z1<=0; ks_out<=0;
             ks_filling<=0; ks_active<=0; ks_pending<=0;
             pcm<=0; v<=0; valid<=0;
@@ -130,7 +139,8 @@ module voice #(
             // Noise-burst initialization has priority over loop playback.
             if (ce && timbre==2'd2 && note_trigger) begin
                 ks_fill_ptr<=0;
-                ks_lfsr<=16'hace1^KS_DELAY;
+                //ks_lfsr<=16'hace1^KS_DELAY;
+                ks_lfsr<=ks_seed;
                 ks_noise_z1<=0;
                 ks_filling<=1;
                 ks_active<=0;
