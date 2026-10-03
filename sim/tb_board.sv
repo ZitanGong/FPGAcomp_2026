@@ -4,9 +4,14 @@ module tb_board;
     reg [20:0] press=0;
     wire [2:0] din;
     wire shld,kclk,bc,ws,sd,pa,df,dk,de,dr,dl,ds;
+    tri1 touch_scl,touch_sda;
+    wire led_data,led_clk,led_lat;
+    mpr_model sensor(touch_scl,touch_sda,1'b1);
     top dut(.key0_n(key0_n),.key1_n(key1_n),.key2_n(key2_n),.key_in(din),
         .shld(shld),.key_clk(kclk),.hp_bclk(bc),.hp_ws(ws),.hp_sd(sd),.pa_n(pa),
-        .dbg_frame(df),.dbg_key(dk),.dbg_err(de),.dbg_ref(dr),.dbg_lock(dl),.dbg_rst(ds));
+        .dbg_frame(df),.dbg_key(dk),.dbg_err(de),.dbg_ref(dr),.dbg_lock(dl),.dbg_rst(ds),
+        .touch_scl(touch_scl),.touch_sda(touch_sda),.touch_irq_n(1'b1),
+        .led_data(led_data),.led_clk(led_clk),.led_lat(led_lat));
     hc165 a(shld,kclk,{1'b1,~press[6:0]},din[0]);
     hc165 b(shld,kclk,{1'b1,~press[13:7]},din[1]);
     hc165 c(shld,kclk,{1'b1,~press[20:14]},din[2]);

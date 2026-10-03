@@ -1,6 +1,7 @@
 /xsim.dir/
 /impl/gwsynthesis/
 /impl/pnr/*
+!/impl/pnr/ao_0.fs
 !/impl/pnr/synth21.fs
 !/impl/pnr/synth21_known_good.fs
 /impl/temp/
@@ -11,3 +12,4 @@
 /*.wdb
 /transcript
 /.Xil/
+/sim_out/

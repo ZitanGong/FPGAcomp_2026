@@ -1,6 +1,12 @@
 # Tang Mega NEO 138K 实时多音色合成器
 
-version:2026.10.02
+version:2026.10.03
+
+MPR121 八段触摸分别控制八对 LED：P1→LED1、2，依次到 P8→LED15、16，松手熄灭。依据通道错位的实测现象，默认改取 ELE0～ELE7（顶层 TOUCH_FIRST=0，可设为 1）；须上板核对两端。自动初始化、I²C 读取、逐段映射和两片 74HC595 发送均由 FPGA 完成。原有键盘和 PT8211 音频继续运行，标准 I²S 未启用。
+
+LED 引脚已按当前接线设为 `led_data=C20`、`led_clk=D19`、`led_lat=C19`；原来占用 D19 的 `dbg_frame` 已移至 E19，避免 PR2016 引脚冲突。模块说明、接线、仿真及上板步骤见 [触摸滑条说明](docs/touch-slider.md)。
+
+当前启用 GAO，最新下载文件是 [impl/pnr/ao_0.fs](impl/pnr/ao_0.fs)，配套配置为 [src/touch_dbg.rao](src/touch_dbg.rao)。保留的 `synth21.fs` 和 `synth21_known_good.fs` 是此前版本，不包含本次完整更新。最新位流 SHA256：`883160AC79819AE62F9A5B124F55C56E7EFA3B51054EC89436EFB2A45DEA68DE`。
 
 ## KEY0 音色切换
 

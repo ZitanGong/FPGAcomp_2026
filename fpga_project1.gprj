@@ -1,25 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1" encoding="UTF-8"?>
 <!DOCTYPE gowin-fpga-project>
 <Project>
-<Template>FPGA</Template>
-<Version>5</Version>
-<Device name="GW5AST-138B" pn="GW5AST-LV138PG484AC1/I0">gw5ast138b-011</Device>
-<FileList>
-<File path="src/audio_core.v" type="file.verilog" enable="1"/>
-<File path="src/top.v" type="file.verilog" enable="1"/>
-<File path="src/audio/i2s_tx.v" type="file.verilog" enable="1"/>
-<File path="src/audio/pt8211_tx.v" type="file.verilog" enable="1"/>
-<File path="src/clock/reset_sync.v" type="file.verilog" enable="1"/>
-<File path="src/key/key_filter.v" type="file.verilog" enable="1"/>
-<File path="src/key/scan165.v" type="file.verilog" enable="1"/>
-<File path="src/key/button_debounce.v" type="file.verilog" enable="1"/>
-<File path="src/synth/adsr.v" type="file.verilog" enable="1"/>
-<File path="src/synth/div16.v" type="file.verilog" enable="1"/>
-<File path="src/synth/mix21.v" type="file.verilog" enable="1"/>
-<File path="src/synth/sine_rom.v" type="file.verilog" enable="1"/>
-<File path="src/synth/synth21.v" type="file.verilog" enable="1"/>
-<File path="src/synth/voice.v" type="file.verilog" enable="1"/>
-<File path="constraints/neo31005.cst" type="file.cst" enable="1"/>
-<File path="constraints/audio.sdc" type="file.sdc" enable="1"/>
-</FileList>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW5AST-138B" pn="GW5AST-LV138PG484AC1/I0">gw5ast138b-011</Device>
+    <FileList>
+        <File path="src/audio/i2s_tx.v" type="file.verilog" enable="1"/>
+        <File path="src/audio/pt8211_tx.v" type="file.verilog" enable="1"/>
+        <File path="src/audio_core.v" type="file.verilog" enable="1"/>
+        <File path="src/clock/reset_sync.v" type="file.verilog" enable="1"/>
+        <File path="src/key/button_debounce.v" type="file.verilog" enable="1"/>
+        <File path="src/key/key_filter.v" type="file.verilog" enable="1"/>
+        <File path="src/key/scan165.v" type="file.verilog" enable="1"/>
+        <File path="src/synth/adsr.v" type="file.verilog" enable="1"/>
+        <File path="src/synth/div16.v" type="file.verilog" enable="1"/>
+        <File path="src/synth/mix21.v" type="file.verilog" enable="1"/>
+        <File path="src/synth/sine_rom.v" type="file.verilog" enable="1"/>
+        <File path="src/synth/synth21.v" type="file.verilog" enable="1"/>
+        <File path="src/synth/voice.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/touch/i2c_reg.v" type="file.verilog" enable="1"/>
+        <File path="src/touch/led595.v" type="file.verilog" enable="1"/>
+        <File path="src/touch/mpr121.v" type="file.verilog" enable="1"/>
+        <File path="src/touch/touch_map.v" type="file.verilog" enable="1"/>
+        <File path="src/touch/touch_led.v" type="file.verilog" enable="1"/>
+        <File path="constraints/neo31005.cst" type="file.cst" enable="1"/>
+        <File path="constraints/audio.sdc" type="file.sdc" enable="1"/>
+        <File path="src/touch_dbg.rao" type="file.gao" enable="1"/>
+    </FileList>
 </Project>
